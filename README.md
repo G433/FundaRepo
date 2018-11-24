@@ -19,4 +19,6 @@ I would also change the architecture to be a more micro services oriented and as
 change I would publish reports read from the funda api to a message broker (e.g RabbitMQ, or Azure service bus etc) the message subscribers
 would aggregate and analyse the reports etc. make it a more dynamic system.
 
+BTW: because of the rate limit please wait around 1 minute between the different calls.
+
 Thank you!!

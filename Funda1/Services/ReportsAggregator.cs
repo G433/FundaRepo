@@ -56,10 +56,9 @@ namespace Funda1.Services
                     reports.Add(await finishedTask.ConfigureAwait(false));
                 }
 
-                Console.WriteLine($"Finished round {i + 1} out of {roundsCalculation.Item1}, Wait {roundsCalculation.Item3} seconds...");
-
                 if (i < roundsCalculation.Item1 - 1)
                 {
+                    Console.WriteLine($"Finished round {i + 1} out of {roundsCalculation.Item1}, please wait for {roundsCalculation.Item3} seconds... (rate limit)");
                     await Task.Delay((int)(roundsCalculation.Item3 * 1000)).ConfigureAwait(false);
                 }
             }
